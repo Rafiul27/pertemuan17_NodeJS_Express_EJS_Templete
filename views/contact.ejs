@@ -1,0 +1,13 @@
+      <h1>Daftar Kontak</h1>
+      <br>
+      <% if (typeof contacts === 'undefined' || contacts.length === 0) { %>
+        <li><h1><%= message %></h1></li>
+      <% } else { %>
+      <ul class="contact">
+          <% contacts.forEach(contact => { %>
+            <li><h5>Nama: <%= contact.nama %></h5></li>
+            <li><h5>Nomor HP: <%= contact.mobile %></h5></li>
+            <br />
+          <% }) %>
+        <% } %>
+      </ul>
