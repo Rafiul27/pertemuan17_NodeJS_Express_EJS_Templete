@@ -18,6 +18,12 @@ app.use(express.static('public'))
 // Menggunakan express-ejs-layouts sebagai middleware
 app.use(expressLayouts);
 
+// application level midleware
+app.use((req, res, next) => {
+    console.log('Time: ', Date.now());
+    next();
+})
+
 // Menggunakan middleware untuk menyajikan file statis dari direktori saat ini
 app.use(express.static(__dirname));
 
