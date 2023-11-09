@@ -12,6 +12,9 @@ const port = 3000;
 // Mengatur EJS sebagai template engine
 app.set('view engine', 'ejs');
 
+// built-in middleware
+app.use(express.static('public'))
+
 // Menggunakan express-ejs-layouts sebagai middleware
 app.use(expressLayouts);
 
@@ -42,15 +45,18 @@ app.get('/contact', (req, res) => {
     const contact = [
         {
             nama: "Rafi'ul Huda",
-            mobile: "081283288739"
+            mobile: "081283288739",
+            email: "rafiul@gmail.com"
         },
         {
             nama: "Rafiul",
-            mobile: "081283288789"
+            mobile: "081283288789",
+            email: "rafiul@gmail.com"
         },
         {
             nama: "Raya Adinda Jayadi Ahmad",
-            mobile: "081283288773"
+            mobile: "081283288773",
+            email: "rayaAdinda01@gmail.com"
         }
     ]; 
     
